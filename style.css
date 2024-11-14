@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --cor-principal: #ffcccc;
+    --cor-secundaria: #ffcccc;
+    --cor-destaque: #ffcccc;
+}
+
+body {
+    font-family: 'Chakra Petch', sans-serif;
+    color: var(--cor-principal);
+    position: relative; /* Necessário para a posição dos emojis */
+}
+
+h1, h2, h5 {
+    color: var(--cor-secundaria);
+    font-weight: 700;
+}
+
+.lead, .btn-link {
+    color: var(--cor-destaque);
+    font-weight: 700;
+}
+
+a, .btn-link:hover {
+    color: var(--cor-principal);
+}
+
+a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Estilo dos emojis */
+.emoji {
+    position: absolute;
+    font-size: 40px;
+    animation: aparecerDesaparecer 5s ease-in-out infinite;
+}
+
+/* Animação de desaparecer e aparecer */
+@keyframes aparecerDesaparecer {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(10deg);
+    }
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+    }
+    75% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5) rotate(10deg);
+    }
+}
+
